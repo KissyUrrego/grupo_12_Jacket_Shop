@@ -1,0 +1,37 @@
+{
+  "name": "grupo_12_undefined",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daewii/grupo_12_undefined.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daewii/grupo_12_undefined/issues"
+  },
+  "homepage": "https://github.com/Daewii/grupo_12_undefined#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^3.3.0",
+    "normalize.css": "^8.0.1",
+    "sequelize": "^6.25.5",
+    "sequelize-cli": "^6.5.2"
+  }
+}

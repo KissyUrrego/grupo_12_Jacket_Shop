@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head")%>
+<%- include("partials/header")%>
+<body>
+    <h1 class="titleAddProduct">Agregar Producto</h1>
+    <br>
+    <section class="formProductAdd">
+        <form action="/products/create" method="post" enctype="multipart/form-data">
+            <label for="name">Nombre </label>
+            <p><input type="text" name="name" id="" required></p>
+            <label for="description">Descripción </label>
+            <p><input type="text" name="description" id="" required> </p>
+            <label for="image">Fotos </label>
+            <p><input type="file" name="image" id=""></p>
+            <div>
+                <label for="category_id">Categoría </label>
+            <select class="form-select" aria-label="Elije la categoría" name="category_id">
+                <option selected disabled>Elige la categoría -</option>
+            <% categories.forEach(oneCategory => { %>
+                <option value="<%= oneCategory.id %>"><%= oneCategory.category %></option>
+            <% }) %>
+            </select>
+        </div>
+        <div>
+            <label for="material_id">Materiales </label>
+            <select name="material_id">
+                <option selected disabled>Elige el material -</option>
+            <% materials.forEach(Material => { %>
+                <option value="<%= Material.id %>"><%= Material.material %></option>
+            <% }) %>
+            </select>
+        </div>
+        <div>
+            <label for="color_id">Colores </label>
+            <select name="color_id">
+                <option selected disabled>Elige el color -</option>
+            <% colors.forEach(Color => { %>
+                <option value="<%= Color.id %>"><%= Color.color %></option>
+            <% }) %>
+            </select>
+        </div>
+        <div>
+            <label for="size_id">Tallas </label>
+            <select name="size_id">
+                <option selected disabled>Elige la talla -</option>
+            <% sizes.forEach(Size => { %>
+                <option value="<%= Size.id %>"><%= Size.size %></option>
+            <% }) %>
+            </select>
+        </div>
+            <label for="price">Precio </label>
+            <p><input type="number" name="price" id="" required></p>
+            <br>
+            <p> <button class="buttonAdd" type="submit">Agregar</button>
+            
+            <a  class="buttonBackProducts" href="/products">Listado de Productos</a></p>
+        </form>
+    </section>
+    <%- include("partials/footer") %> 
+</body>
+
+</html>

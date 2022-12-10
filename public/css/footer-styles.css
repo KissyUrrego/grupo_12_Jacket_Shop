@@ -1,0 +1,28 @@
+footer {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    bottom: 0;
+}
+
+footer h3 {
+    padding: 8px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.icon-footer {
+    font-size: 3em;
+    margin-bottom: 10px;
+    transition: 2s;
+}
+
+.icon-footer i:hover {
+    transform: scale(1.5);
+}
+
+

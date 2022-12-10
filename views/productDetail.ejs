@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/css/productDetail-Styles.css">
+<%- include("partials/head")%>
+<%- include("partials/header")%>
+<body>
+    <div class="product">
+        <div class="product-small-img">
+
+            <img src="\images\product1.jpg" onclick="myFunction(this)">
+            <img src="\images\Tarjeta-Hombres.png" onclick="myFunction(this)">
+            <img src="\images\product1.jpg" onclick="myFunction(this)">
+            <img src="\images\product1.jpg" onclick="myFunction(this)">
+
+        </div>
+
+        <div class="container-full-img">
+
+            <% image.forEach(image => {%>
+                 <img src="/images/products/<%= image.productImage %>" >
+                 <% }) %>
+            
+        </div>
+
+        <div class="productDescription">
+            <p>Inicio/Productos/Chaquetas</p>
+            <h1><%= product.name %></h1>
+            <h4><%= product.price %>  COP</h4>
+                <select name="size_id">
+                    <option selected disabled>Seleccione Talla -</option>
+                <% sizes.forEach(size => { %>
+                    <option value="<%= size.id %>"><%= size.size %></option>
+                <% }) %>
+                </select>
+            <input type="number" value="1">
+            <button class="btnComprar">Comprar</button>
+
+            <h3>Detalle del producto</h3>
+            <p><%= product.description %> </p>
+        </div>
+    </div>
+    <script>
+        function myFunction(smallImg){
+            var fullImg= document.getElementById("imgContainerBox");
+            fullImg.src = smallImg.src;
+        }
+        </script>
+</body>
+<%- include("partials/footer") %> 
+
+</html>

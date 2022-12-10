@@ -1,0 +1,12 @@
+.titleAddProduct {
+    padding-top: 20px;
+    padding-left: 100px;
+}
+
+.formProductAdd {
+    padding-left: 100px;
+}
+
+.formProductAdd div, p {
+    padding-bottom: 15px;
+}
